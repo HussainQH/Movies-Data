@@ -16,9 +16,8 @@ function App() {
   });
 
   return (
-    <div className="container myCard bg-primary text-black">
+    <div className=" myCard bg-primary text-black ">
       <MoviesList setInfo={setInfo} />
-      {/* <Detail info={info} /> */}
     </div>
   );
 }
