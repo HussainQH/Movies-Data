@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.poster {
+  height: auto;
+  width: 200px;
+}
+
+.myCard {
+  text-align: center;
+}

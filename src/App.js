@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+
+import MoviesList from "./Components/MoviesList";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const [info, setInfo] = useState({
+    id: "287947",
+    title: "Shazam!",
+    poster: "https://image.tmdb.org/t/p/w500/xnopI5Xtky18MPhK40cZAGAOVeV.jpg",
+    overview:
+      "A boy is given the ability to become an adult superhero in times of need with a single magic word.",
+    release_date: 1553299200,
+    genres: ["Action", "Comedy", "Fantasy"],
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container myCard bg-primary text-black">
+      <MoviesList setInfo={setInfo} />
+      {/* <Detail info={info} /> */}
     </div>
   );
 }
